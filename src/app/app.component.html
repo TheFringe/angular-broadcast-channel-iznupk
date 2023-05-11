@@ -1,0 +1,9 @@
+<input [(ngModel)]="pokemon" />
+<button (click)="pokemonService.addPokemon(pokemon)">Add</button><br />
+<button (click)="pokemonService.resendPokemons()">Resend</button>
+
+<ul>
+  <li *ngFor="let pokemon of pokemonService.pokemons$ | async">
+    {{ pokemon }}
+  </li>
+</ul>
